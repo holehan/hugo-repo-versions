@@ -1,0 +1,8 @@
+baseURL = "http://example.org/"
+title = "Show me your Hugo version"
+disableKinds = ["home", "taxonomy", "taxonomyTerm", "RSS", "sitemap"]
+
+[outputFormats]
+  [outputFormats.version-badge]
+    baseName = "hugo-sitegen"
+    mediaType = "image/svg+xml"

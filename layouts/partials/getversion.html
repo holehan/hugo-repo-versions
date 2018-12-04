@@ -1,0 +1,7 @@
+{{- $version := float "NaN" -}}
+{{ if eq .Params.repo "copr" }}
+{{- $version = index $.Site.Data.copr "builds" 0 "build" "built_packages" 0 "version" -}}
+{{ else if eq .Params.repo "snap" }}
+{{- $version = index $.Site.Data.snap "_embedded" "clickindex:package" 0 "version" -}}
+{{ end }}
+{{- $version -}}
