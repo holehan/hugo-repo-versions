@@ -1,5 +1,5 @@
 # hugo-repo-versions
-Provides missing [repology.org hugo version badges](https://repology.org/metapackage/hugo-sitegen/versions) for snap and copr
+Provides missing [repology.org hugo version badges](https://repology.org/metapackage/hugo-sitegen/versions) for snap, copr and docker.
 
 | Repository | Package name | Version |
 | ---: | --- | --- |
