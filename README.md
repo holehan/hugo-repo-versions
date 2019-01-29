@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/730595b9-0a5d-45d9-b879-4f27ccdfb0fb/deploy-status)](https://app.netlify.com/sites/hugo-repo-versions/deploys)
+
 # hugo-repo-versions
 Provides missing [repology.org hugo version badges](https://repology.org/metapackage/hugo-sitegen/versions) for snap, copr and docker.
 
