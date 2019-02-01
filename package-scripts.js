@@ -1,7 +1,7 @@
 module.exports = {
   scripts: {
     default: 'hugo',
-    clean: 'rm -rf public resources data/*',
+    clean: 'rm -rf public resources data/* docker.txt',
     updateRepos: {
       copr:
         'curl -s "https://copr.fedorainfracloud.org/api_2/builds?project_id=12493&limit=1" > data/copr.json',
@@ -13,6 +13,6 @@ module.exports = {
         'curl -a "https://raw.githubusercontent.com/cibuilds/hugo/master/build-images.sh" > docker.txt'
     },
     build: 'nps clean && nps u.c u.s u.g u.d && hugo --minify --gc',
-    watch: 'hugo server'
+    watch: 'nps build && hugo server'
   }
 };
