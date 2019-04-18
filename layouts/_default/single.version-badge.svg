@@ -5,20 +5,20 @@
 {{- if eq $githubVersion $repoVersion -}}
 {{- $badgeColor = "#4c1" -}}
 {{- end -}}
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="20">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="20">
     <clipPath id="clip">
-        <rect rx="3" width="35" height="20" fill="#000"/>
+        <rect rx="3" width="46" height="20" fill="#000"/>
     </clipPath>
     <linearGradient id="grad" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
         <stop offset="1" stop-opacity=".1"/>
     </linearGradient>
-    <a xlink:href="https://repology.org/metapackage//versions">
+    <a xlink:href="https://repology.org/project//versions">
         <g clip-path="url(#clip)">
-            <rect width="35" height="20" fill="{{ $badgeColor }}"/>
-            <rect width="35" height="20" fill="url(#grad)"/>
+            <rect width="46" height="20" fill="{{ $badgeColor }}"/>
+            <rect width="46" height="20" fill="url(#grad)"/>
             <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
-                <text x="17.5" y="15" fill="#010101" fill-opacity=".3">{{ $repoVersion }}</text>
-                <text x="17.5" y="14">{{ $repoVersion }}</text>
+                <text x="23.0" y="15" fill="#010101" fill-opacity=".3">{{ $repoVersion }}</text>
+                <text x="23.0" y="14">{{ $repoVersion }}</text>
             </g>
         </g>
     </a>
