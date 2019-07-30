@@ -1,0 +1,6 @@
+[build.environment]
+  YARN_VERSION = "1.17.3"
+  HUGO_VERSION = "0.56.2"
+[build]
+  command = "yarn run build"
+  publish = "public"
