@@ -1,6 +1,7 @@
-{{- $githubVersion := index $.Site.Data.github "name" -}}
+{{ $json := getJSON .Site.Params.githubUrlPre .Site.Params.githubUrl }}
+{{- $githubVersion := index $json "name" -}}
 {{- $githubVersion = string (strings.TrimPrefix "v" $githubVersion) -}}
-{{- $repoVersion :=  string (partial "getversion.html" . ) -}}
+{{- $repoVersion :=  string (strings.TrimLeft "\n" (partial "getversion.html" . )) -}}
 {{- $badgeColor := "#e05d44" -}}
 {{- if eq $githubVersion $repoVersion -}}
 {{- $badgeColor = "#4c1" -}}

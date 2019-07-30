@@ -1,8 +1,10 @@
 {
-  "dependencies": {
-    "nps": "^5.9.3"
-  },
+  "dependencies": {},
   "scripts": {
-    "start": "nps"
+    "start": "npm run watch",
+    "clean": "rm -rf public resources data/* docker.txt",
+    "update:docker": "curl -a 'https://raw.githubusercontent.com/cibuilds/hugo/master/build-images.sh' > docker.txt",
+    "build": "npm run clean && npm run update:docker && hugo --minify --gc",
+    "watch": "npm run build && hugo server"
   }
 }
