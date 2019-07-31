@@ -10,3 +10,40 @@ disableKinds = ["home", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
 [params]
 githubUrlPre = "https://api.github.com"
 githubUrl = "/repos/gohugoio/hugo/releases/latest"
+
+# [module]
+# [[module.mounts]]
+#     source = "content"
+#     target = "content"
+
+# [[module.mounts]]
+#   source = "static"
+#   target = "static"
+
+# [[module.mounts]]
+#   source = "layouts"
+#   target = "layouts"
+
+# [[module.mounts]]
+#   source = "data"
+#   target = "data"
+
+# [[module.mounts]]
+#   source = "assets"
+#   target = "assets"
+
+# [[module.mounts]]
+#   source = "i18n"
+#   target = "i18n"
+
+# [[module.mounts]]
+#   source = "archetypes"
+#   target = "archetypes"
+
+# [[module.imports]]
+#     path = "github.com/cibuilds/hugo"
+#     disable = false
+
+# [[module.imports.mounts]]
+#     source = "."
+#     target ="data/docker"
