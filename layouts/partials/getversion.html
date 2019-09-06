@@ -8,5 +8,7 @@
 {{- $version = index $json "_embedded" "clickindex:package" 0 "version" -}}
 {{ else if eq .Params.repo "docker" }}
 {{- $version = strings.TrimLeft "hugo:" (index (findRE "hugo:(\\d{1,3}\\.\\d{1,3}(\\.\\d{1,3})?)" (readFile "data/docker/build-images.sh")) 0) -}}
+{{ else if eq .Params.repo "minimaldocker" }}
+{{- $version = strings.TrimLeft "ARG VERSION=" (index (findRE "ARG VERSION=(\\d{1,3}\\.\\d{1,3}(\\.\\d{1,3})?)" (readFile "data/docker/Dockerfile-base")) 0) -}}
 {{ end }}
 {{- $version -}}
