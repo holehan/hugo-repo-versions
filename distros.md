@@ -4,6 +4,7 @@
 |                     [Termux][termux] | [![][termux-version]][termux-link]                     |                       |
 |                               Docker |                                                        |                       |
 |                  [CI Builds][docker] | [![][docker-version]][docker-link]                     |                       |
+|      [Minimal Docker][minimaldocker] | [![][minimaldocker-version]][minimaldocker-link]       |                       |
 |                      Linux (generic) |                                                        |                       |
 |               [Linuxbrew][linuxbrew] | [![][linuxbrew-version]][linuxbrew-link]               | completion, man pages |
 |                         [Snap][snap] | [![][snap-version]][snap-link]                         |                       |
@@ -87,6 +88,10 @@
 [docker]: https://hub.docker.com/r/cibuilds/
 [docker-version]: https://hugo-repo-versions.netlify.com/docker/hugo-sitegen.svg
 [docker-link]: https://github.com/cibuilds/hugo/
+
+[minimaldocker]: https://hub.docker.com/r/klakegg/hugo/
+[minimaldocker-version]: https://hugo-repo-versions.netlify.com/minimaldocker/hugo-sitegen.svg
+[minimaldocker-link]: https://github.com/klakegg/docker-hugo
 
 [termux]: https://termux.net
 [termux-version]: https://repology.org/badge/version-only-for-repo/termux/hugo-sitegen.svg
