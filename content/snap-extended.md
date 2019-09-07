@@ -1,6 +1,6 @@
 ---
 title: 'Snap'
-repo: snap
+repo: snap-extended
 outputs:
   - version-badge
 ---

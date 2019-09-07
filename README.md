@@ -9,3 +9,4 @@ Provides missing [repology.org hugo version badges](https://repology.org/metapac
 | [Fedora Copr](https://copr.fedorainfracloud.org/coprs/) | [hugo](https://copr.fedorainfracloud.org/coprs/daftaupe/hugo/) | [![](https://hugo-repo-versions.netlify.com/copr/hugo-sitegen.svg)](https://copr.fedorainfracloud.org/coprs/daftaupe/hugo/) |
 | [Minimal Docker](https://hub.docker.com/r/klakegg/hugo/) | [hugo](https://github.com/klakegg/docker-hugo/) | [![](https://hugo-repo-versions.netlify.com/minimaldocker/hugo-sitegen.svg)](https://github.com/klakegg/docker-hugo/) |
 | [Snap](https://snapcraft.io) | [hugo](https://snapcraft.io/hugo) | [![](https://hugo-repo-versions.netlify.com/snap/hugo-sitegen.svg)](https://snapcraft.io/hugo) |
+| [Snap (extended)](https://snapcraft.io) | [hugo](https://snapcraft.io/hugo) | [![](https://hugo-repo-versions.netlify.com/snap-extended/hugo-sitegen.svg)](https://snapcraft.io/hugo) |

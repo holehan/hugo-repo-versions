@@ -8,6 +8,7 @@
 |                      Linux (generic) |                                                        |                       |
 |               [Linuxbrew][linuxbrew] | [![][linuxbrew-version]][linuxbrew-link]               | completion, man pages |
 |                         [Snap][snap] | [![][snap-version]][snap-link]                         |                       |
+|     [Snap (extended)][snap-extended] | [![][snap-extended-version]][snap-extended-link]       |                       |
 |              Linux (Distro specific) |                                                        |                       |
 |                   [Arch Linux][arch] | [![][arch-version]][arch-link]                         |                       |
 |       [Debian stable][debian_stable] | [![][debian_stable-version]][debian_stable-link]       |                       |
@@ -80,6 +81,10 @@
 [snap]: https://gohugo.io
 [snap-version]: https://hugo-repo-versions.netlify.com/snap/hugo-sitegen.svg
 [snap-link]: https://repology.org/metapackage/hugo-sitegen/versions
+
+[snap-extended]: https://gohugo.io
+[snap-extended-version]: https://hugo-repo-versions.netlify.com/snap-extended/hugo-sitegen.svg
+[snap-extended-link]: https://repology.org/metapackage/hugo-sitegen/versions
 
 [copr]: https://gohugo.io
 [copr-version]: https://hugo-repo-versions.netlify.com/copr/hugo-sitegen.svg
