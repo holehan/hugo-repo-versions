@@ -1,9 +1,12 @@
 {
   "dependencies": {},
+  "license": "MIT",
+  "author": "Florian Grässle",
+  "repository": "holehan/hugo-repo-versions",
   "scripts": {
     "start": "npm run watch",
     "clean": "rm -rf public resources data",
-    "update:docker": "mkdir -p data/docker && curl -s 'https://raw.githubusercontent.com/cibuilds/hugo/master/build-images.sh' > data/docker/build-images.sh && curl -s https://github.com/klakegg/docker-hugo/blob/master/Dockerfile-base > data/docker/Dockerfile-base",
+    "update:docker": "mkdir -p data/docker && curl -s 'https://raw.githubusercontent.com/cibuilds/hugo/master/build-images.sh' > data/docker/build-images.sh && curl -s https://raw.githubusercontent.com/klakegg/docker-hugo/master/Dockerfile-base > data/docker/Dockerfile-base",
     "update:snap": "mkdir -p data/snap && curl -H 'X-Ubuntu-Series: 16' 'https://api.snapcraft.io/api/v1/snaps/details/hugo' > data/snap/stable.json && curl -H 'X-Ubuntu-Series: 16' 'https://api.snapcraft.io/api/v1/snaps/details/hugo?channel=extended' > data/snap/extended.json",
     "build": "npm run clean && npm run update:docker && npm run update:snap && hugo --ignoreCache --minify --gc",
     "watch": "npm run clean && npm run update:docker && npm run update:snap && hugo server --ignoreCache"
