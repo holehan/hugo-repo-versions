@@ -7,6 +7,9 @@ disableKinds = ["home", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
     baseName = "hugo-sitegen"
     mediaType = "image/svg+xml"
 
+[outputs]
+  page = ["json"]
+
 [params]
 githubUrlPre = "https://api.github.com"
 githubUrl = "/repos/gohugoio/hugo/releases/latest"

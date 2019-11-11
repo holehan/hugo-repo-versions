@@ -1,0 +1,6 @@
+{
+  "data":
+  {
+    "version" : "{{ string (strings.TrimLeft "\n" (partial "getversion.html" . )) }}"
+  }
+}

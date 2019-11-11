@@ -1,6 +1,7 @@
 ---
-title: 'Snap'
+title: "Snap"
 repo: snap
 outputs:
   - version-badge
+  - json
 ---
