@@ -4,7 +4,7 @@ SNAP_REMOTE="$(curl -s -H 'X-Ubuntu-Series: 16' 'https://api.snapcraft.io/api/v1
 SNAP_LOCAL="$(curl -s https://hugo-repo-versions.netlify.com/snap/index.json | jq -r '.data.version')"
 SNAP_EXTENDED_REMOTE="$(curl -s -H 'X-Ubuntu-Series: 16' 'https://api.snapcraft.io/api/v1/snaps/details/hugo?channel=extended' | jq -r '.version')"
 SNAP_EXTENDED_LOCAL="$(curl -s https://hugo-repo-versions.netlify.com/snap-extended/index.json | jq -r '.data.version')"
-DOCKER_REMOTE="$(curl -s 'https://raw.githubusercontent.com/cibuilds/hugo/master/build-images.sh' | grep -Eo -m 1 'hugo:\d{1,3}.\d{1,3}.\d{1,3}' | sed 's/^hugo://g')"
+DOCKER_REMOTE="$(curl -s 'https://raw.githubusercontent.com/cibuilds/hugo/master/build-images.sh' | grep -Eo -m 1 'hugo:[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}' | sed 's/^hugo://g')"
 DOCKER_LOCAL="$(curl -s https://hugo-repo-versions.netlify.com/docker/index.json | jq -r '.data.version')"
 MINIMALDOCKER_REMOTE="$(curl -s https://raw.githubusercontent.com/klakegg/docker-hugo/master/Dockerfile-base | grep -m 1 'ARG VERSION=' | sed 's/^ARG VERSION=//g')"
 MINIMALDOCKER_LOCAL="$(curl -s https://hugo-repo-versions.netlify.com/minimaldocker/index.json | jq -r '.data.version')"
