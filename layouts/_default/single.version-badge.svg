@@ -1,5 +1,5 @@
 {{ $json := getJSON .Site.Params.githubUrlPre .Site.Params.githubUrl }}
-{{- $githubVersion := index $json "name" -}}
+{{- $githubVersion := index $json "tag_name" -}}
 {{- $githubVersion = string (strings.TrimPrefix "v" $githubVersion) -}}
 {{- $repoVersion :=  string (strings.TrimLeft "\n" (partial "getversion.html" . )) -}}
 {{- $badgeColor := "#e05d44" -}}
