@@ -33,6 +33,5 @@ if [ $HUGO_REMOTE != $HUGO_LOCAL ] ||
   [ $MINIMALDOCKER_REMOTE != $MINIMALDOCKER_LOCAL ] ||
   [ $COPR_REMOTE != $COPR_LOCAL ]; then
   echo "Repo info needs updating. Triggering netlify rebuild."
-  exit 0
+  exit 1
 fi
-exit 1

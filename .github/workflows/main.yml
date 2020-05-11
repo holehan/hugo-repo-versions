@@ -13,4 +13,4 @@ jobs:
         env:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |
-          bash check-for-updates.sh && curl -X POST -d {} ${{ secrets.NETLIFY_BUILD_HOOK }}
+          bash check-for-updates.sh || curl -X POST -d {} ${{ secrets.NETLIFY_BUILD_HOOK }}
