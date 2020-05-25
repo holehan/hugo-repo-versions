@@ -8,7 +8,7 @@ SNAP_EXTENDED_REMOTE="$(curl -s -H 'X-Ubuntu-Series: 16' 'https://api.snapcraft.
 SNAP_EXTENDED_LOCAL="$(curl -s https://hugo-repo-versions.netlify.app/snap-extended/index.json | jq -r '.data.version')"
 DOCKER_REMOTE="$(curl -s 'https://raw.githubusercontent.com/cibuilds/hugo/master/build-images.sh' | grep -Eo -m 1 'hugo:[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | sed 's/^hugo://g')"
 DOCKER_LOCAL="$(curl -s https://hugo-repo-versions.netlify.app/docker/index.json | jq -r '.data.version')"
-MINIMALDOCKER_REMOTE="$(curl -s https://raw.githubusercontent.com/klakegg/docker-hugo/master/Dockerfile-base | grep -m 1 'ARG VERSION=' | sed 's/^ARG VERSION=//g')"
+MINIMALDOCKER_REMOTE="$(curl -s 'https://api.github.com/repos/klakegg/docker-hugo/releases/latest' | jq -r '.tag_name')"
 MINIMALDOCKER_LOCAL="$(curl -s https://hugo-repo-versions.netlify.app/minimaldocker/index.json | jq -r '.data.version')"
 COPR_REMOTE="$(curl -s 'https://copr.fedorainfracloud.org/api_2/builds?project_id=12493&limit=1' | jq -r '.builds[0].build.built_packages[0].version')"
 COPR_LOCAL="$(curl -s https://hugo-repo-versions.netlify.app/copr/index.json | jq -r '.data.version')"
