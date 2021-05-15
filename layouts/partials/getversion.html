@@ -5,10 +5,10 @@
 {{- $version = index (findRE "(\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})" $version) 0 -}}
 {{ else if eq .Params.repo "snap" }}
 {{- $json := getJSON "/data/snap/stable.json" -}}
-{{- $version = $json.version -}}
+{{- $version = strings.TrimLeft "v" $json.version -}}
 {{ else if eq .Params.repo "snap-extended" }}
 {{- $json := getJSON "/data/snap/extended.json" -}}
-{{- $version = $json.version -}}
+{{- $version = strings.TrimLeft "v" $json.version -}}
 {{ else if eq .Params.repo "docker" }}
 {{- $version = strings.TrimLeft "hugo:" (index (findRE "hugo:(\\d{1,3}\\.\\d{1,3}(\\.\\d{1,3})?)" (readFile "data/docker/build-images.sh")) 0) -}}
 {{ else if eq .Params.repo "minimaldocker" }}
